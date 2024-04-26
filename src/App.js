@@ -1,25 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import Section from "./Section";
+import Heading from "./Heading";
+import Post from "./Post";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Section>
+            <Heading>My Profile</Heading>
+            <Post body="Ready my blog"/>
+            <Section>
+                <Heading>All Posts</Heading>
+                <Post>1</Post>
+                <Section>
+                    <Heading>Comments</Heading>
+                    <Post>Comment 1</Post>
+                    <Post>Comment 2</Post>
+                    <Section>
+                        <Heading>Replies</Heading>
+                        <Post>Replies 1</Post>
+                        <Post>Replies 2</Post>
+                        <Post>Replies 3</Post>
+                    </Section>
+                    <Post>Comment 3</Post>
+                </Section>
+                <Post>2</Post>
+                <Section>
+                    <Heading>Comments</Heading>
+                    <Post>Comment 1</Post>
+                    <Post>Comment 2</Post>
+                    <Post>Comment 3</Post>
+                </Section>
+            </Section>
+        </Section>
+    );
 }
 
 export default App;
